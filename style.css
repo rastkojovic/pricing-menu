@@ -1,0 +1,156 @@
+html, body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif; 
+    background-color: #F4F4F4;
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 560px;
+    width: 270px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background-color: #FCFFFC;
+    box-shadow: 3px 3px 10px #333333;
+    border-radius: 15px;
+}
+
+.option {
+    font-size: 0.8rem;
+    border-radius: 15px 15px 0 0;
+    padding: 0 10px 10px 10px;
+    text-align: center;
+    color: white;
+}
+
+.price > .red {
+    background-image: linear-gradient(to bottom right, #F7D126, #EC9D39,#DF615B, #DC4671, #D4458F);
+}
+
+.price > .blue {
+    background-image: linear-gradient(to bottom right, #49B8D8, #3576AC, #345592, #314D8B, #2E4383);
+}
+
+.price > .green {
+    background-image: linear-gradient(to bottom right, #A9D199, #75BEA4, #3AA8B4, #2593BD, #2485BA);
+}
+
+.option > hr {
+    width: 80%;
+    height: 3px;
+    background-color: white;
+    border: none;
+}
+
+.option > p {
+    font-size: 0.6rem;
+    line-height: 1rem;
+    margin: 0 auto;
+    width: 80%; 
+}
+
+.option > h1 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    letter-spacing: 0.2rem;
+}
+
+.amount {
+    margin-top: 30px;
+}
+
+.amount  sup {
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+.amount sub {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.amount > span {
+    font-size: 5.7rem;
+    font-weight: bold;
+}
+
+.price > hr {
+    width: 40%;
+    height: 3px;
+    border: none;
+    background-color: #D5D8D5;
+}
+
+.price ul {
+    padding-left: 15px;
+    list-style: none;
+}
+
+.price li.pink-check {
+    background: url("./assets/images/pink-check.png") no-repeat;
+}
+
+.price li.blue-check {
+    background: url("./assets/images/blue-check.png") no-repeat;
+}
+
+.price li.green-check {
+    background: url("./assets/images/green-check.png") no-repeat;
+}
+
+.price li {
+    padding-left: 25px;
+    font-size: 0.6rem;
+    margin-top: 15px;
+}
+
+.price > button {
+    width: 110px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: white;
+    padding: 0.5em;
+    margin-top: 15px;
+}
+
+/* Why can't I select with just .red ~ button */
+
+.option.red ~ button {
+    background-image: linear-gradient(to bottom right, #F7D126, #EC9D39,#DF615B, #DC4671, #D4458F);
+}
+
+.option.red ~ button:hover {
+    background-image: linear-gradient(to bottom right, #cdad21, #c58531,#c0534d, #ba3a5f, #b73a7b);
+}
+
+.option.blue ~ button {
+    background-image: linear-gradient(to bottom right, #49B8D8, #3576AC, #345592, #314D8B, #2E4383);
+}
+
+.option.blue ~ button:hover {
+    background-image: linear-gradient(to bottom right, #3c9eb9, #2c6491, #2c487b, #294279, #25366c);
+}
+
+.option.green ~ button {
+    background-image: linear-gradient(to bottom right, #A9D199, #75BEA4, #3AA8B4, #2593BD, #2485BA);
+}
+
+.option.green ~ button:hover {
+    background-image: linear-gradient(to bottom right, #89ae7a, #5fa089, #2e8d98, #1b799f, #1b6f9c);
+}
+
+.option.red ~ button:active, .option.blue ~ button:active, .option.green ~ button:active {
+    box-shadow: 3px 3px 4px #333333 inset;
+}
